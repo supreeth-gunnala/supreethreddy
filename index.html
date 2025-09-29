@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Supreeth Reddy — Portfolio</title>
+  <meta name="description" content="Portfolio of Gunnala Supreeth Reddy — C, C++, Java, Python, Web Development" />
+  <style>
+    /* Theme variables */
+    :root{
+      --bg: #0b0f16;
+      --text: #e6eef6;
+      --muted: #9aa4b2;
+      --card: #0f1720;
+      --accent: #6c63ff;
+      --glass: rgba(255,255,255,0.03);
+    }
+    [data-theme="light"]{
+      --bg: #f6f7fb;
+      --text: #0b1220;
+      --muted: #4b5563;
+      --card: #ffffff;
+      --glass: rgba(0,0,0,0.04);
+    }
+
+    html{scroll-behavior:smooth}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:var(--text);background:var(--bg);transition:background .25s,color .25s}
+
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#3db5ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+    nav{display:flex;gap:10px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+
+    .btn{padding:8px 12px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#3db5ff);color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;padding:36px 0}
+    .eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-size:13px}
+    h1{margin:8px 0 6px;font-size:32px}
+    .muted{color:var(--muted)}
+
+    .hero-card{background:var(--card);padding:16px;border-radius:12px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{background:var(--card);padding:16px;border-radius:12px}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+
+    footer{margin-top:36px;padding:18px 0;border-top:1px dashed rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:880px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:520px){.grid-3{grid-template-columns:1fr}nav{display:none}}
+
+    /* small inputs */
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SR</div>
+        <div>
+          <div style="font-weight:700">Gunnala Supreeth Reddy</div>
+          <div class="muted" style="font-size:13px">Computer Science Engineering • VIT</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#internships">Experience</a>
+        <a href="#contact">Contact</a>
+        <button class="btn ghost" id="downloadBtn">Download Resume</button>
+        <button class="btn ghost" id="themeToggle" aria-pressed="false" title="Toggle theme">🌙</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Hi — I build &amp; code things</div>
+          <h1>I'm <span style="background:linear-gradient(90deg,var(--accent),#3db5ff);-webkit-background-clip:text;color:transparent">Supreeth</span> — Software &amp; Web Developer</h1>
+          <p class="muted">C • C++ • Java • Python • Web Development — I focus on clean UI and performant code.</p>
+
+          <div style="margin-top:18px;display:flex;gap:10px">
+            <button class="btn primary" id="seeProjects">See Projects</button>
+            <button class="btn ghost" id="hireBtn">Hire / Contact</button>
+          </div>
+
+          <div style="margin-top:16px" class="muted">Andhra Pradesh • +91 9491574928 • <a id="instaHero" href="https://www.instagram.com/supreethreddy__/" target="_blank" style="color:var(--muted);text-decoration:none">@supreethreddy__</a></div>
+        </div>
+
+        <aside class="hero-card">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,#2b3346,#0f1720);display:flex;align-items:center;justify-content:center;font-weight:700;color:white">SR</div>
+            <div>
+              <div style="font-weight:700">Supreeth R</div>
+              <div class="muted">Computer Science Engineering</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <div class="muted">Skills</div>
+            <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:8px">
+              <div style="padding:6px 8px;border-radius:999px;border:1px solid rgba(255,255,255,0.04);">C</div>
+              <div style="padding:6px 8px;border-radius:999px;border:1px solid rgba(255,255,255,0.04);">C++</div>
+              <div style="padding:6px 8px;border-radius:999px;border:1px solid rgba(255,255,255,0.04);">Java</div>
+              <div style="padding:6px 8px;border-radius:999px;border:1px solid rgba(255,255,255,0.04);">Python</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a id="instaAside" class="muted" href="https://www.instagram.com/supreethreddy__/" target="_blank">Instagram</a>
+            <a class="muted" href="#contact">Contact</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" style="margin-top:18px">
+        <div class="card">
+          <h3>About Me</h3>
+          <p class="muted">I'm Gunnala Supreeth Reddy — a Computer Science Engineering student at VIT. I build web apps, small tools and enjoy learning systems-level programming. I like turning ideas into working projects and sharing them on GitHub.</p>
+        </div>
+      </section>
+
+      <section id="projects" style="margin-top:18px">
+        <h3>Projects</h3>
+        <div class="projects" style="margin-top:12px">
+          <article class="card">
+            <h4>Portfolio Starter</h4>
+            <p class="muted">Single-file responsive portfolio template (this site).</p>
+            <div style="margin-top:10px;display:flex;gap:8px"><a class="muted" href="#">Demo</a><a class="muted" href="#">Code</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="internships" style="margin-top:22px">
+        <h3>Experience</h3>
+        <div class="grid-3" style="margin-top:12px">
+          <div class="card">
+            <h4>Stock Research Intern — FinSight Labs (Fictional)</h4>
+            <div class="muted">Summer 2024</div>
+            <p>Conducted quantitative and qualitative research on stock market sectors, wrote scripts to collect and preprocess financial data, and assisted in building simple backtests for strategy ideas using Python and pandas.</p>
+          </div>
+
+          <div class="card">
+            <h4>Software Intern — BlueLeaf Innovations (Fictional)</h4>
+            <div class="muted">Winter 2024</div>
+            <p>Worked on internal tooling and small automation scripts. Focused on code quality, documentation, and collaborating with a small engineering team. (This role is a fictional entry provided for portfolio purposes.)</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:22px">
+        <h3>Contact</h3>
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;margin-top:12px">
+          <div class="card">
+            <form id="contactForm" onsubmit="handleForm(event)">
+              <label class="muted">Your name</label>
+              <input type="text" name="name" required placeholder="Your name">
+
+              <label class="muted" style="margin-top:8px">Email</label>
+              <input type="email" name="email" required placeholder="you@example.com">
+
+              <label class="muted" style="margin-top:8px">Message</label>
+              <textarea name="message" rows="5" required placeholder="Short message..."></textarea>
+
+              <div style="margin-top:10px;display:flex;gap:8px">
+                <button class="btn primary" type="submit">Send</button>
+                <button class="btn ghost" type="button" id="emailBtn">Email Me</button>
+              </div>
+            </form>
+          </div>
+
+          <aside class="card">
+            <h4>Quick info</h4>
+            <div class="muted">Email</div>
+            <div>supreeth94915@gmail.com</div>
+            <div class="muted" style="margin-top:8px">Phone</div>
+            <div>+91 9491574928</div>
+
+            <div style="margin-top:12px">
+              <div class="muted">Find me:</div>
+              <div style="display:flex;gap:8px;margin-top:8px">
+                <a class="muted" href="https://github.com/" target="_blank">GitHub</a>
+                <a id="instaContact" class="muted" href="https://www.instagram.com/supreethreddy__/" target="_blank">Instagram</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="muted">© <span id="year"></span> Gunnala Supreeth Reddy — Built with care</div>
+        <div class="muted">Made with HTML, CSS &amp; JavaScript</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Set copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll to projects button
+    document.getElementById('seeProjects').addEventListener('click', ()=> document.getElementById('projects').scrollIntoView({behavior:'smooth'}));
+
+    // Hire button opens mail client reliably
+    document.getElementById('hireBtn').addEventListener('click', ()=>{
+      const subject = encodeURIComponent('Opportunity from portfolio');
+      const body = encodeURIComponent('Hi Supreeth,\n\nI would like to discuss a potential opportunity...');
+      window.location.href = `mailto:supreeth94915@gmail.com?subject=${subject}&body=${body}`;
+    });
+
+    // Email Me button in contact aside
+    document.getElementById('emailBtn').addEventListener('click', ()=>{
+      window.location.href = 'mailto:supreeth94915@gmail.com';
+    });
+
+    // Download resume: try fetching and trigger download; fallback opens in new tab and alerts
+    document.getElementById('downloadBtn').addEventListener('click', downloadResume);
+    function downloadResume(){
+      const url = 'resume.pdf';
+      fetch(url).then(r=>{
+        if(!r.ok) throw new Error('not found');
+        return r.blob();
+      }).then(blob=>{
+        const blobUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = 'Supreeth_Reddy_Resume.pdf';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(blobUrl);
+      }).catch(()=>{
+        window.open(url, '_blank');
+        setTimeout(()=>{
+          alert('If the resume did not download, please make sure a file named "resume.pdf" is placed in the same folder as this HTML, or update the download link.');
+        },300);
+      });
+    }
+
+    // Theme toggle (persistent)
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    let theme = savedTheme || (prefersDark ? 'dark' : 'light');
+    const applyTheme = (t)=>{
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem('theme', t);
+      themeToggle.textContent = t === 'dark' ? '☀️' : '🌙';
+      themeToggle.setAttribute('aria-pressed', t === 'dark');
+    };
+    applyTheme(theme);
+    themeToggle.addEventListener('click', ()=>{ theme = theme === 'dark' ? 'light' : 'dark'; applyTheme(theme); });
+
+    // Contact form handler — simple mailto fallback
+    function handleForm(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = encodeURIComponent(f.name.value);
+      const email = encodeURIComponent(f.email.value);
+      const message = encodeURIComponent(f.message.value);
+      const subject = encodeURIComponent('Contact from portfolio — ' + decodeURIComponent(name));
+      const body = encodeURIComponent('Name: ' + decodeURIComponent(name) + '\nEmail: ' + decodeURIComponent(email) + '\n\n' + decodeURIComponent(message));
+      window.location.href = `mailto:supreeth94915@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    // Ensure all Instagram links use the correct handle
+    const insta = 'https://www.instagram.com/supreethreddy__/';
+    ['instaHero','instaAside','instaContact'].forEach(id=>{const el=document.getElementById(id); if(el) el.href = insta;});
+  </script>
+</body>
+</html>
